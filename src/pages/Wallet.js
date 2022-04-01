@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { fetchAPI } from '../actions';
 
 class Wallet extends React.Component {
   constructor() {
@@ -9,6 +10,11 @@ class Wallet extends React.Component {
     this.state = {
       totalField: 0,
     };
+  }
+
+  componentDidMount() {
+    const { currencies } = this.props;
+    currencies();
   }
 
   render() {
@@ -28,8 +34,13 @@ const mapStateToProps = (state) => ({
   user: state.user,
 });
 
-export default connect(mapStateToProps)(Wallet);
+const mapDispatchToProps = (dispatch) => ({
+  currencies: () => dispatch(fetchAPI()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Wallet);
 
 Wallet.propTypes = {
   user: PropTypes.instanceOf(Object).isRequired,
+  currencies: PropTypes.func.isRequired,
 };
