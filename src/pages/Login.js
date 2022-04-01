@@ -66,7 +66,6 @@ class Login extends React.Component {
         />
         <button
           type="submit"
-          label="Entrar"
           onClick={ this.handleButton }
           disabled={ !inputValid }
         >
