@@ -3,16 +3,15 @@
 import { CURRENCIES } from '../actions';
 
 const INITIAL_STATE = {
-  wallet: {
-    currencies: [],
-    expenses: [],
-  },
+  currencies: [],
+  expenses: [],
 };
 
 const walletReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
   case CURRENCIES:
     return {
+      ...state,
       currencies: action.payload,
     };
   default:
