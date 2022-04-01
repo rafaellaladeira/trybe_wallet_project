@@ -22,3 +22,8 @@ code {
 .top {
   margin: 10px;
 }
+
+.inputs {
+  padding: 55px;
+  background-color: rgb(116, 189, 165);
+}

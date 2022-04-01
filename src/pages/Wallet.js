@@ -30,7 +30,7 @@ class Wallet extends React.Component {
           <p data-testid="total-field" className="top">{ totalField }</p>
           <p data-testid="header-currency-field" className="top">BRL</p>
         </header>
-        <div>
+        <div className="inputs">
           <label htmlFor="value">
             Valor:
             <input
