@@ -65,7 +65,7 @@ class Login extends React.Component {
           onChange={ this.handleChange }
         />
         <button
-          type="submit"
+          type="button"
           onClick={ this.handleButton }
           disabled={ !inputValid }
         >

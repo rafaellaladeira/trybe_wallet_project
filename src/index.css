@@ -27,3 +27,7 @@ code {
   padding: 55px;
   background-color: rgb(116, 189, 165);
 }
+
+.button {
+  margin: 10px;
+}
