@@ -31,3 +31,26 @@ code {
 .button {
   margin: 10px;
 }
+
+
+.table {
+  display: flex;
+
+}
+
+/* .head {
+  background-color: rgb(71, 113, 113);
+  color: rgb(190, 182, 182);
+  display: flex;
+  justify-content: space-between;
+
+}
+
+/* .body {
+  background-color: rgb(91, 127, 127);
+  color: rgb(190, 182, 182);
+}
+
+.td {
+  width: 100px;
+} */
