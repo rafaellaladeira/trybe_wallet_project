@@ -83,7 +83,6 @@ class Wallet extends React.Component {
                 name="currency"
                 onChange={ this.handleChange }
               >
-                <option value="" disabled selected> </option>
                 {
                   currencies.map((types) => (
                     <option
