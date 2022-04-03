@@ -5,8 +5,7 @@ import { connect } from 'react-redux';
 class Table extends React.Component {
   render() {
     const { expenses } = this.props;
-    // const { tag, method, value, currency, description } = expenses;
-    // console.log(tag);
+
     return (
       <table className="table">
         <thead className="head">
@@ -27,23 +26,21 @@ class Table extends React.Component {
           {
             expenses.map((expense) => {
               const { exchangeRates, currency, value } = expense;
+              const valueDecimals = (value * 1).toFixed(2);
               const getAsk = exchangeRates[currency].ask;
-              const convert = exchangeRates[currency].name;
-              const mult = value * getAsk;
+              const getAskToRender = (exchangeRates[currency].ask * 1).toFixed(2);
+              const exchange = exchangeRates[currency].name;
+              const conversionCurrency = (value * getAsk).toFixed(2);
 
               return (
                 <tr key={ expense.id }>
                   <td className="td">{ expense.description }</td>
                   <td className="td">{ expense.tag }</td>
                   <td className="td">{ expense.method }</td>
-                  <td className="td">{ expense.value }</td>
-                  <td className="td">{ convert}</td>
-                  <td className="td">{ getAsk }</td>
-                  <td className="td">
-                    R$
-                    {' '}
-                    { mult }
-                  </td>
+                  <td className="td">{ valueDecimals }</td>
+                  <td className="td">{ exchange }</td>
+                  <td className="td">{ getAskToRender }</td>
+                  <td className="td">{ conversionCurrency }</td>
                   <td className="td">Real</td>
                 </tr>
               );
