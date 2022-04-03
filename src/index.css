@@ -5,11 +5,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(179, 179, 247);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.form {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 250px;
+  
+}
+
+.btnLogin {
+  background-color: rgb(66, 109, 66);
+  color: white;
 }
 
 .header {
@@ -32,25 +46,26 @@ code {
   margin: 10px;
 }
 
-
 .table {
   display: flex;
-
+  flex-direction: column;
 }
 
-/* .head {
+.head {
   background-color: rgb(71, 113, 113);
   color: rgb(190, 182, 182);
   display: flex;
-  justify-content: space-between;
-
+  justify-content: space-evenly;
 }
 
-/* .body {
+.body {
   background-color: rgb(91, 127, 127);
-  color: rgb(190, 182, 182);
+  color: rgb(214, 212, 212);
+  display: inline-table;
+  padding: 10px 55px;
 }
 
 .td {
-  width: 100px;
-} */
+  height: 25px;
+  min-width: 185px;
+} 

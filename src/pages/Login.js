@@ -43,7 +43,8 @@ class Login extends React.Component {
   render() {
     const { email, password, inputValid } = this.state;
     return (
-      <form onSubmit={ this.handleButton }>
+      <form className="form" onSubmit={ this.handleButton }>
+        <h1>TrybeWallet</h1>
         <div>Login: </div>
         <input
           data-testid="email-input"
@@ -65,6 +66,7 @@ class Login extends React.Component {
           onChange={ this.handleChange }
         />
         <button
+          className="btnLogin"
           type="button"
           onClick={ this.handleButton }
           disabled={ !inputValid }

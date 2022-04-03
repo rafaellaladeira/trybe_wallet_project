@@ -10,15 +10,15 @@ class Table extends React.Component {
       <table className="table">
         <thead className="head">
           <tr>
-            <th>Descrição</th>
-            <th>Tag</th>
-            <th>Método de pagamento</th>
-            <th>Valor</th>
-            <th>Moeda</th>
-            <th>Câmbio utilizado</th>
-            <th>Valor convertido</th>
-            <th>Moeda de conversão</th>
-            <th>Editar/Excluir</th>
+            <th className="td">Descrição</th>
+            <th className="td">Tag</th>
+            <th className="td">Método de pagamento</th>
+            <th className="td">Valor</th>
+            <th className="td">Moeda</th>
+            <th className="td">Câmbio utilizado</th>
+            <th className="td">Valor convertido</th>
+            <th className="td">Moeda de conversão</th>
+            <th className="td">Editar/Excluir</th>
           </tr>
         </thead>
 
@@ -42,6 +42,12 @@ class Table extends React.Component {
                   <td className="td">{ getAskToRender }</td>
                   <td className="td">{ conversionCurrency }</td>
                   <td className="td">Real</td>
+                  <button
+                    type="button"
+                    data-testid="btn-delete"
+                  >
+                    Excluir
+                  </button>
                 </tr>
               );
             })
