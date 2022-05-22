@@ -26,9 +26,9 @@ class Table extends React.Component {
           {
             expenses.map((expense) => {
               const { exchangeRates, currency, value } = expense;
-              const valueDecimals = (value * 1).toFixed(2);
+              const valueDecimals = Number(value).toFixed(2);
               const getAsk = exchangeRates[currency].ask;
-              const getAskToRender = (exchangeRates[currency].ask * 1).toFixed(2);
+              const getAskToRender = Number(exchangeRates[currency].ask).toFixed(2);
               const exchange = exchangeRates[currency].name;
               const conversionCurrency = (value * getAsk).toFixed(2);
 
@@ -42,12 +42,14 @@ class Table extends React.Component {
                   <td className="td">{ getAskToRender }</td>
                   <td className="td">{ conversionCurrency }</td>
                   <td className="td">Real</td>
-                  <button
-                    type="button"
-                    data-testid="btn-delete"
-                  >
-                    Excluir
-                  </button>
+                  <td>
+                    <button
+                      type="button"
+                      data-testid="delete-btn"
+                    >
+                      Excluir
+                    </button>
+                  </td>
                 </tr>
               );
             })

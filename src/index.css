@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(179, 179, 247);
+  background-color: rgb(204, 212, 244);
 }
 
 code {
@@ -16,9 +16,16 @@ code {
 .form {
   display:flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 250px;
-  
+  margin-top: 220px;
+  margin-left: 42em;
+  height: 20em;
+  width: 20em;
+  border: 6px double rgb(5, 133, 77);
+  border-radius: 15%;
+  background-color: rgb(197, 230, 238);
+  box-shadow: 1em 1em 6em 6em rgb(152, 190, 184);
 }
 
 .btnLogin {
@@ -30,7 +37,7 @@ code {
   float:right;
   display: flex;
   margin: 10px;
-  background-color: rgb(16, 167, 167);
+  background-color: rgb(197, 230, 238);
 }
 
 .top {
@@ -39,11 +46,16 @@ code {
 
 .inputs {
   padding: 55px;
-  background-color: rgb(116, 189, 165);
+  background-color: rgb(108, 190, 210);
 }
 
 .button {
   margin: 10px;
+  height: 2em;
+  width: 10em;
+  border: 2px double rgb(84, 103, 103);
+  background-color: rgb(106, 77, 157);
+  color:white;
 }
 
 .table {
@@ -53,14 +65,14 @@ code {
 
 .head {
   background-color: rgb(71, 113, 113);
-  color: rgb(190, 182, 182);
+  color: rgb(197, 230, 238);
   display: flex;
   justify-content: space-evenly;
 }
 
 .body {
-  background-color: rgb(91, 127, 127);
-  color: rgb(214, 212, 212);
+  background-color: rgb(95, 144, 144);
+  color: rgb(235, 231, 231);
   display: inline-table;
   padding: 10px 55px;
 }
